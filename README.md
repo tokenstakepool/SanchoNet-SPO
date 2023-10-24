@@ -158,7 +158,9 @@ cd
 mkdir sanchonet
 nano startnode.sh
 chmod +x startnode.sh
+./startnode.sh 
 ```
+
 Copy the start script:
 
 ```
@@ -181,11 +183,22 @@ PORT="3000"
     --config "${CONFIG_FILE}"
 ```
 
+Enable the start script:
+
 ```
 sudo systemctl daemon-reload
+sudo systemctl enable sancho-node.service
 ```
 
+Other commands
+```
+sudo systemctl stop sancho-node.service
+```
 
+```
+sudo systemctl start sancho-node.service
+```
 
-
-
+```
+journalctl --unit=sancho-node --follow
+```
