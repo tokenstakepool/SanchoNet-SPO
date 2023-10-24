@@ -1,4 +1,4 @@
-# sanchonet-spo
+# SanchoNet-SPO
 ## Guide for SanchoNet stake pool operators (SPOs)
 ### Ubuntu 22.04 (x86)
 
