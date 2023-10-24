@@ -157,8 +157,6 @@ WantedBy          = multi-user.target
 cd
 mkdir sanchonet
 nano startnode.sh
-chmod +x startnode.sh
-./startnode.sh 
 ```
 
 Copy the start script:
@@ -183,7 +181,11 @@ PORT="3000"
     --config "${CONFIG_FILE}"
 ```
 
-Enable the start script:
+```
+chmod +x startnode.sh 
+```
+
+Enable the service:
 
 ```
 sudo systemctl daemon-reload
