@@ -87,8 +87,8 @@ sudo chmod u=rw,go=r /usr/local/{lib/{libblst.a,pkgconfig/libblst.pc},include/{b
 ### Build cardano-node and cardano-cli
 ```
 cd ..
-cd cardano-node
 git clone https://github.com/input-output-hk/cardano-node.git
+cd cardano-node
 git fetch --all --recurse-submodules --tags
 ```
 
