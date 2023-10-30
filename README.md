@@ -156,6 +156,7 @@ WantedBy          = multi-user.target
 ```
 cd
 mkdir sanchonet
+cd sanchonet
 nano startnode.sh
 ```
 
