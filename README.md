@@ -2,7 +2,7 @@
 ## Guide for SanchoNet stake pool operators (SPOs)
 ### Ubuntu 22.04 LTS (x86)
 
-### Prerequisites
+#### Prerequisites
 
 ```
 sudo apt-get update -y && sudo apt-get upgrade -y
@@ -10,7 +10,7 @@ sudo apt-get install automake build-essential pkg-config libffi-dev libgmp-dev l
 ```
 
 
-Install cabal
+##### Install cabal
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
@@ -33,7 +33,7 @@ cabal --version
 mkdir -p $HOME/sancho-src
 cd $HOME/sancho-src
 ```
-### Libsodium
+#### Libsodium
 
 ```
 git clone https://github.com/input-output-hk/libsodium
@@ -57,7 +57,7 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 source .bashrc
 ```
 
-### BLST
+#### BLST
 
 ```
 cd $HOME/sancho-src
@@ -84,7 +84,7 @@ sudo cp libblst.a /usr/local/lib
 sudo chmod u=rw,go=r /usr/local/{lib/{libblst.a,pkgconfig/libblst.pc},include/{blst.{h,hpp},blst_aux.h}}
 ```
 
-### Build cardano-node and cardano-cli
+#### Build cardano-node and cardano-cli
 ```
 cd ..
 git clone https://github.com/input-output-hk/cardano-node.git
@@ -92,7 +92,7 @@ cd cardano-node
 git fetch --all --recurse-submodules --tags
 ```
 
-version 8.5.0 for SanchoNet
+**version 8.5.0 for SanchoNet**
 
 ```
 git checkout f1ce770834bf7150ca29cb647065c9e62d39be1a
@@ -118,7 +118,7 @@ cardano-node --version
 cardano-cli --version
 ```
 
-### cardano-node as a Linux service, sancho-node.service
+#### cardano-node as a Linux service, sancho-node.service
 
 ```
 sudo nano /etc/systemd/system/sancho-node.service
@@ -151,7 +151,7 @@ SyslogIdentifier=sancho-node
 WantedBy          = multi-user.target
 ```
 
-### startnode.sh
+#### Start sancho-node (startnode.sh)
 
 ```
 cd
