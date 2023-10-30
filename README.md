@@ -48,10 +48,13 @@ sudo make install
 cd
 nano .bashrc
 ```
+add these two lines to your .bashrc
+
 ```
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 ```
+source it, to activate those paths on current terminal
 
 ```
 source .bashrc
@@ -181,7 +184,7 @@ PORT="3000"
     --port "${PORT}" \
     --config "${CONFIG_FILE}"
 ```
-
+Give execution permission to the start script
 ```
 chmod +x startnode.sh 
 ```
@@ -192,6 +195,14 @@ Enable the service:
 sudo systemctl daemon-reload
 sudo systemctl enable sancho-node.service
 ```
+
+Check status of the service:
+
+```
+sudo systemctl status sancho-node.service
+```
+
+
 
 Other commands
 ```
