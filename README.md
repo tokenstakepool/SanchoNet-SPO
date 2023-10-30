@@ -1,6 +1,6 @@
 # SanchoNet-SPO
 ## Guide for SanchoNet stake pool operators (SPOs)
-### Ubuntu 22.04 (x86)
+### Ubuntu 22.04 LTS (x86)
 
 ### Prerequisites
 
